@@ -1,117 +1,116 @@
 @charset "UTF-8";
-/* Desktop (≥960px) stylesheet.
-   Fluid design via percentages + float-based columns (NO flexbox).
-   Linear + ANGLED linear gradients with solid-color fallbacks.
-   Palette:
-   67E5DB (teal) | ADEAEA (light teal) | 000000 (black) | 0800E0 (electric blue) | FFFFFF (white)
-*/
 
-/* Global */
-body{
-  background: #000000; /* fallback */
-  background: -moz-linear-gradient(45deg, #000000 0%, #0800E0 100%);
-  background: -webkit-linear-gradient(45deg, #000000 0%, #0800E0 100%);
-  background: -o-linear-gradient(45deg, #000000 0%, #0800E0 100%);
-  background: linear-gradient(45deg, #000000 0%, #0800E0 100%);
-  color: #FFFFFF;
+/* Base typography & reset */
+body {
+  color: #000000;
+  background-color: #FFFFFF;
   font-family: Verdana, Geneva, Arial, sans-serif;
-  margin:0; padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Wrapper (fluid) */
-#wrapper{
-  width: 66%;
-  min-height: 600px;
+/* Wrapper centered at 960px like lectures */
+#wrapper {
+  width: 960px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ADEAEA; /* light teal */
-  overflow: hidden; /* contain floats */
-  border-left: 6px solid #67E5DB;
-  border-right: 6px solid #67E5DB;
+  min-height: 100vh;
+  background-color: #FFFFFF;
 }
 
-/* Columns — floats only */
-#left-column{
-  float: left;
-  width: 33%;
-  min-height: 500px;
-  background-color: #67E5DB; /* teal */
-  color: #000000;
-}
-#right-column{
-  float: left;
-  width: 66%;
-  min-height: 500px;
-  background-color: #FFFFFF; /* white */
-  color: #000000;
-}
-
-/* Banner with ANGLED linear gradient (explicit requirement) */
-#banner{
-  height: 120px;
-  background: #0800E0; /* fallback */
-  background: -moz-linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  background: -webkit-linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  background: -o-linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  background: linear-gradient(135deg, #0800E0 0%, #000000 100%);
+/* Header: angled gradient (Week-1 gradient syntax) */
+header {
   color: #FFFFFF;
+  padding: 16px 16px 0 16px;
+  background: #0800E0;
+  background: -moz-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
+  background: -webkit-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
+  background: -o-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
+  background: linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
 }
-#banner h1{ margin:0; padding:18px 15px; }
 
-/* Nav (list → buttons) */
-#site-nav{ padding: 5px 15px; }
-.nav-list{ list-style:none; margin:0; padding:0; }
-.nav-list li{ float:left; margin-right:8px; }
+h1,h2,h3,h4,h5,h6,p,li { margin-left: 15px; }
 
-.button{
+/* Navigation as large, tap-friendly buttons (no hover menus) */
+nav .button {
+  display: inline-block;
+  text-decoration: none;
   font-size: large;
-  text-decoration:none;
-  background-color:#67E5DB; /* teal */
-  display:block;
-  padding:8px 12px;
-  border-radius:12px;
-  box-shadow:3px 3px 2px rgba(0,0,0,.35);
-  color:#000000; /* dark text on teal */
-}
-.button:hover{ box-shadow:5px 5px 3px rgba(0,0,0,.6); }
-
-.clear{ clear: both; }
-
-/* Content blocks */
-.box{
-  width: 30%;
-  min-height: 100px;
-  float: left;
-  margin: 15px;
-  padding: 10px;
-  background: #ADEAEA; /* light teal */
-  border: 2px solid #67E5DB;
-  border-radius: 10px;
+  background-color: #ADEAEA;
   color: #000000;
+  padding: 10px 16px;
+  margin: 8px 8px 16px 15px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+}
+nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
+.clear { clear: both; }
+
+/* Straight (non-angled) gradient section to satisfy linear-gradient requirement */
+.gradient-straight {
+  background: #67E5DB;
+  background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: -webkit-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: -o-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: linear-gradient(to bottom, #67E5DB 0%, #ADEAEA 100%);
+  padding: 16px 0 24px 0;
+  border: 2px solid #000000;
 }
 
-.profile-photo{
-  width: 95%;
+/* About page image */
+.feature-img {
+  max-width: 320px;
   height: auto;
-  display:block;
-  margin: 10px auto;
-  border: 4px solid #67E5DB;
-  background:#FFFFFF;
-}
-.intro-video{
-  display:block;
-  margin: 10px auto;
-  max-width: 95%;
-  border: 4px solid #67E5DB;
-  background:#000000;
+  display: block;
+  margin: 10px 15px;
+  border: 2px solid #000000;
 }
 
-/* Footer */
-#footer{
-  height:80px;
-  background-color:#000000; 
-  color:#FFFFFF;
-  padding:10px 15px;
+/* Projects list (no flexbox) */
+.project {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  min-height: 120px;
+  margin: 10px 15px;
+  padding: 10px;
+  background-color: #F7FFFF; /* very light from palette */
+  border: 1px solid #ADEAEA;
 }
-#footer a{ color:#67E5DB; }
+
+/* Video framing (from lecture idea of styling <video>) */
+video {
+  width: 480px;
+  max-width: 90%;
+  display: block;
+  margin: 10px 15px;
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
+  box-shadow: 10px 10px 5px #000000;
+}
+
+/* Contact form */
+form p { margin-left: 15px; }
+input, textarea {
+  font-family: inherit;
+  padding: 6px;
+  border: 1px solid #0800E0;
+}
+input[type="submit"] {
+  background-color: #0800E0;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Footer with semantic address */
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 12px 0 20px 0;
+  margin-top: 24px;
+}
+footer a { color: #67E5DB; }
+
 

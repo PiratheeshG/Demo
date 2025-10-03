@@ -1,80 +1,68 @@
 @charset "UTF-8";
-/* Tablet (481–960px).
-   Stacks columns; increases contrast; floats kept simple.
-   Palette: 67E5DB | ADEAEA | 000000 | 0800E0 | FFFFFF
-*/
 
-body{
-  color: #FFFFFF;
+body {
+  color: #000000;
   font-family: Verdana, Geneva, Arial, sans-serif;
-  margin:0; padding:0;
-  background:#000000;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6,p,li{ margin-left:15px; margin-top:0; }
+h1,h2,h3,h4,h5,h6,p,li { margin-left: 15px; margin-top: 0; }
 
-#wrapper{
-  width: 100%;
-  min-height: 600px;
-  margin-left:auto; margin-right:auto;
-  background-color:#FFFFFF;
-  color:#000000;
-  border-top: 8px solid #0800E0;
+#wrapper { width: 100%; margin: 0 auto; background-color: #FFFFFF; }
+
+/* Keep the same angled header gradient */
+header {
+  color: #FFFFFF;
+  padding: 16px 16px 0 16px;
+  background: #0800E0;
+  background: -moz-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
+  background: -webkit-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
+  background: -o-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
+  background: linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
 }
 
-#left-column{
-  float:none;
-  width:100%;
-  min-height:120px;
-  background-color:#ADEAEA;
-  color:#000000;
-  border-bottom: 6px solid #67E5DB;
-}
-#right-column{
-  float:none;
-  width:100%;
-  min-height:600px;
-  background-color:#FFFFFF;
-  color:#000000;
-}
-
-#banner{ 
-  height:100px; 
-  background: -moz-linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  background: -webkit-linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  background: -o-linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  background: linear-gradient(135deg, #0800E0 0%, #000000 100%);
-  color:#FFFFFF;
-}
-#footer{ height:80px; background-color:#000000; color:#FFFFFF; }
-
-.box{
+/* Buttons as block-level for easier tapping on tablet */
+nav .button {
+  display: block;
   width: 45%;
-  min-height:120px;
-  float:left;
-  background-color:#ADEAEA;
-  color:#000000;
-  margin:15px;
-  border: 2px solid #67E5DB;
-  border-radius: 10px;
+  float: left;
+  text-decoration: none;
+  font-size: x-large;
+  background-color: #ADEAEA;
+  color: #000000;
+  padding: 10px;
+  margin: 8px 8px 16px 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 3px gray;
+}
+nav .button:hover { box-shadow: 5px 5px 3px black; }
+.clear { clear: both; }
+
+/* Straight gradient section */
+.gradient-straight {
+  background: #67E5DB;
+  background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: -webkit-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: -o-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: linear-gradient(to bottom, #67E5DB 0%, #ADEAEA 100%);
+  padding: 16px 0 24px 0;
+  border: 2px solid #000000;
 }
 
-.button{
-  font-size:x-large;
-  text-decoration:none;
-  background-color:#67E5DB;
-  display:block;
-  width:45%;
-  float:left;
-  padding:8px;
-  margin:5px;
-  border-radius:15px;
-  box-shadow:5px 5px 3px rgba(0,0,0,.35);
-  color:#000000;
+.feature-img { max-width: 90%; height: auto; border: 2px solid #000000; }
+
+/* Stack projects into two columns (no floats removed; using inline-block widths) */
+.project {
+  display: inline-block;
+  width: 45%;
+  min-height: 120px;
+  margin: 10px 15px;
+  background-color: #F7FFFF;
+  border: 1px solid #ADEAEA;
 }
-.button:hover{ box-shadow:5px 5px 3px rgba(0,0,0,.6); }
 
-.clear{ clear: both; }
+video { width: 90%; max-width: 520px; margin: 10px 15px; background-color:#000; border:2px solid #FFF; box-shadow: 10px 10px 5px #000; }
 
-.profile-photo{ width: 90%; height:auto; display:block; margin:10px auto; background:#FFFFFF; border:4px solid #67E5DB; }
-.intro-video{ max-width: 90%; display:block; margin:10px auto; border:4px solid #67E5DB; background:#000000; }
+footer { background-color: #000000; color: #FFFFFF; padding: 12px 0 20px 0; }
+footer a { color: #67E5DB; }

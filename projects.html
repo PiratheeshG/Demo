@@ -1,61 +1,63 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects — INFR3120</title>
+  <title>Projects — Piratheesh Gunaseelan</title>
   <meta name="viewport" content="width=device-width">
-  <link href="css/full.css"   rel="stylesheet" type="text/css" media="only screen and (min-width:960px)">
-  <link href="css/tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:960px)">
-  <link href="css/phone.css"  rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
+  <link href="full.css"   rel="stylesheet" type="text/css" media="only screen and (min-width:961px)">
+  <link href="tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:960px)">
+  <link href="phone.css"  rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
 </head>
 <body>
-  <header id="banner">
+<div id="wrapper">
+  <header>
     <h1>Projects</h1>
-    <nav id="site-nav">
-      <ul class="nav-list">
-        <li><a class="button" href="index.html">Home</a></li>
-        <li><a class="button" href="about.html">About Me</a></li>
-        <li><a class="button" href="projects.html">Projects</a></li>
-        <li><a class="button" href="contact.html">Contact</a></li>
-      </ul>
+    <nav>
+      <a class="button" href="index.html">Home</a>
+      <a class="button" href="about.html">About</a>
+      <a class="button" href="projects.html">Projects</a>
+      <a class="button" href="contact.html">Contact</a>
       <div class="clear"></div>
     </nav>
   </header>
 
-  <main id="wrapper">
-    <section id="left-column">
-      <article>
-        <h2>Recent Work</h2>
-
-        <h3>Project 1 — Title</h3>
-        <p>2–3 line summary of what it is, your role, and outcome.</p>
-
-        <h3>Project 2 — Title</h3>
-        <p>2–3 line summary of what it is, your role, and outcome.</p>
-
-        <h3>Project 3 — Title</h3>
-        <p>2–3 line summary of what it is, your role, and outcome.</p>
-
-        <h3>Project 4 — Title</h3>
-        <p>2–3 line summary of what it is, your role, and outcome.</p>
-
-      </article>
+  <article>
+    <section>
+      <h2>Recent Work</h2>
+      <!-- List at least 4–5, each with a heading and 2–3 lines -->
+      <div class="project">
+        <h3>Project One</h3>
+        <p>2–3 line description goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>2–3 line description goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project Three</h3>
+        <p>2–3 line description goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project Four</h3>
+        <p>2–3 line description goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project Five</h3>
+        <p>2–3 line description goes here.</p>
+      </div>
     </section>
+  </article>
 
-    <section id="right-column">
-      <div class="box"><p>Screenshot or extra notes</p></div>
-      <div class="box"><p>Links or highlights</p></div>
-      <div class="box"><p>Technologies used</p></div>
-      <div class="clear"></div>
-    </section>
-  </main>
-
-  <footer id="footer">
-    <p>© 2025 Piratheesh Gunaseelan — 
-      <a href="mailto:piratheesh.gunaseelan@ontariotechu.net">piratheesh.gunaseelan@ontariotechu.net</a>
-    </p>
+  <footer>
+    <address>
+      <p>Contact: <a href="mailto:piratheesh.gunaseelan@ontariotechu.net">piratheesh.gunaseelan@ontariotechu.net</a></p>
+    </address>
+    <p>&copy; <span id="year"></span> Piratheesh Gunaseelan</p>
   </footer>
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
 
 

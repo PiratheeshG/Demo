@@ -1,51 +1,53 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio — INFR3120</title>
-  <meta name="viewport" content="width=device-width">
-  <!-- Separate CSS files per viewport (assignment requirement) -->
-  <link href="css/full.css"   rel="stylesheet" type="text/css" media="only screen and (min-width:960px)">
-  <link href="css/tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:960px)">
-  <link href="css/phone.css"  rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
+  <title>Piratheesh Gunaseelan — Portfolio</title>
+  <meta name="viewport" content="width=device-width"> <!-- per notes -->
+  <!-- Separate CSS per viewport (assignment requirement) -->
+  <link href="full.css"   rel="stylesheet" type="text/css" media="only screen and (min-width:961px)">
+  <link href="tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:960px)">
+  <link href="phone.css"  rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
 </head>
 <body>
-  <header id="banner">
-    <h1>My Portfolio</h1>
-    <nav id="site-nav">
-      <ul class="nav-list">
-        <li><a class="button" href="index.html">Home</a></li>
-        <li><a class="button" href="about.html">About Me</a></li>
-        <li><a class="button" href="projects.html">Projects</a></li>
-        <li><a class="button" href="contact.html">Contact</a></li>
-      </ul>
+<div id="wrapper">
+  <header>
+    <h1>Piratheesh Gunaseelan</h1>
+    <nav>
+      <a class="button" href="index.html">Home</a>
+      <a class="button" href="about.html">About</a>
+      <a class="button" href="projects.html">Projects</a>
+      <a class="button" href="contact.html">Contact</a>
       <div class="clear"></div>
     </nav>
   </header>
 
-  <main id="wrapper">
-    <section id="left-column">
-      <article>
-        <h2>Welcome</h2>
-        <p>This is the home page of my INFR3120 portfolio site.</p>
-        <p>Use the navigation to learn more about me and my work.</p>
-      </article>
+  <article>
+    <section class="hero gradient-straight">
+      <h2>Welcome!</h2>
+      <p>This is my portfolio site. I’ll be adding my photo, project thumbnails, and intro video shortly.</p>
     </section>
 
-    <section id="right-column">
-      <div class="box"><p>Highlight #1</p></div>
-      <div class="box"><p>Highlight #2</p></div>
-      <div class="box"><p>Highlight #3</p></div>
-      <div class="clear"></div>
+    <section>
+      <h3>Highlights</h3>
+      <p>Clean, semantic HTML5 structure and responsive CSS (no Flexbox) per course materials and assignment.</p>
     </section>
-  </main>
+  </article>
 
-  <footer id="footer">
-    <p>© 2025 Piratheesh Gunaseelan — 
-      <a href="mailto:piratheesh.gunaseelan@ontariotechu.net">piratheesh.gunaseelan@ontariotechu.net</a>
-    </p>
+  <footer>
+    <address>
+      <p>Contact: <a href="mailto:piratheesh.gunaseelan@ontariotechu.net">piratheesh.gunaseelan@ontariotechu.net</a></p>
+    </address>
+    <p>&copy; <span id="year"></span> Piratheesh Gunaseelan</p>
   </footer>
+</div>
+
+<script>
+  // purely progressive enhancement; not required for marks; okay to omit
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
 
 
