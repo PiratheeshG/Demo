@@ -1,17 +1,27 @@
 @charset "UTF-8";
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   color: #000000;
   font-family: Verdana, Geneva, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 h1,h2,h3,h4,h5,h6,p,li { margin-left: 15px; margin-top: 0; }
 
-#wrapper { width: 100%; margin: 0 auto; background-color: #FFFFFF; }
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
 
-/* Keep the same angled header gradient */
 header {
   color: #FFFFFF;
   padding: 16px 16px 0 16px;
@@ -22,7 +32,6 @@ header {
   background: linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
 }
 
-/* Buttons as block-level for easier tapping on tablet */
 nav .button {
   display: block;
   width: 45%;
@@ -37,22 +46,17 @@ nav .button {
   box-shadow: 5px 5px 3px gray;
 }
 nav .button:hover { box-shadow: 5px 5px 3px black; }
-.clear { clear: both; }
+nav::after { content: ""; display: block; clear: both; }
 
-/* Straight gradient section */
 .gradient-straight {
   background: #67E5DB;
-  background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
-  background: -webkit-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
-  background: -o-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
   background: linear-gradient(to bottom, #67E5DB 0%, #ADEAEA 100%);
   padding: 16px 0 24px 0;
   border: 2px solid #000000;
 }
 
-.feature-img { max-width: 90%; height: auto; border: 2px solid #000000; }
+.feature-img { max-width: 90%; height: auto; border: 2px solid #000000; margin: 10px auto; }
 
-/* Stack projects into two columns (no floats removed; using inline-block widths) */
 .project {
   display: inline-block;
   width: 45%;
@@ -62,8 +66,25 @@ nav .button:hover { box-shadow: 5px 5px 3px black; }
   border: 1px solid #ADEAEA;
 }
 
-video { width: 90%; max-width: 520px; margin: 10px 15px; background-color:#000; border:2px solid #FFF; box-shadow: 10px 10px 5px #000; }
+video {
+  width: 90%;
+  max-width: 520px;
+  margin: 10px 15px;
+  background-color:#000;
+  border:2px solid #FFF;
+  box-shadow: 10px 10px 5px #000;
+}
 
-footer { background-color: #000000; color: #FFFFFF; padding: 12px 0 20px 0; }
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0 20px 0;
+}
 footer a { color: #67E5DB; }
+
 
