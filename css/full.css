@@ -1,31 +1,33 @@
 @charset "UTF-8";
-/* One stylesheet + media queries.
+/* Desktop (≥960px) stylesheet.
    Fluid design via percentages + float-based columns (NO flexbox).
-   Linear + angled linear gradients with solid-color fallbacks.
-   Dragon-inspired palette:
-   B91C1C (ember red) | F59E0B (gold) | 111827 (obsidian) | 059669 (jade) | 334155 (slate)
+   Linear + ANGLED linear gradients with solid-color fallbacks.
+   Palette:
+   67E5DB (teal) | ADEAEA (light teal) | 000000 (black) | 0800E0 (electric blue) | FFFFFF (white)
 */
 
-/* ===== Base (Desktop/Laptop ≥ 960px baseline) ===== */
+/* Global */
 body{
-  background: #111827; /* fallback */
-  background: -moz-linear-gradient(45deg, #111827 0%, #334155 100%);
-  background: -webkit-linear-gradient(45deg, #111827 0%, #334155 100%);
-  background: -o-linear-gradient(45deg, #111827 0%, #334155 100%);
-  background: linear-gradient(45deg, #111827 0%, #334155 100%);
-  color: white;
+  background: #000000; /* fallback */
+  background: -moz-linear-gradient(45deg, #000000 0%, #0800E0 100%);
+  background: -webkit-linear-gradient(45deg, #000000 0%, #0800E0 100%);
+  background: -o-linear-gradient(45deg, #000000 0%, #0800E0 100%);
+  background: linear-gradient(45deg, #000000 0%, #0800E0 100%);
+  color: #FFFFFF;
   font-family: Verdana, Geneva, Arial, sans-serif;
   margin:0; padding:0;
 }
 
-/* Wrapper (fluid width) */
+/* Wrapper (fluid) */
 #wrapper{
   width: 66%;
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #334155; /* slate */
+  background-color: #ADEAEA; /* light teal */
   overflow: hidden; /* contain floats */
+  border-left: 6px solid #67E5DB;
+  border-right: 6px solid #67E5DB;
 }
 
 /* Columns — floats only */
@@ -33,27 +35,30 @@ body{
   float: left;
   width: 33%;
   min-height: 500px;
-  background-color: #0f172a; /* deeper slate */
+  background-color: #67E5DB; /* teal */
+  color: #000000;
 }
 #right-column{
   float: left;
   width: 66%;
   min-height: 500px;
-  background-color: #1f2937; /* slate/obsidian mix */
+  background-color: #FFFFFF; /* white */
+  color: #000000;
 }
 
-/* Banner with angled linear gradient */
+/* Banner with ANGLED linear gradient (explicit requirement) */
 #banner{
   height: 120px;
-  background: #334155; /* fallback */
-  background: -moz-linear-gradient(135deg, #334155 0%, #111827 100%);
-  background: -webkit-linear-gradient(135deg, #334155 0%, #111827 100%);
-  background: -o-linear-gradient(135deg, #334155 0%, #111827 100%);
-  background: linear-gradient(135deg, #334155 0%, #111827 100%);
+  background: #0800E0; /* fallback */
+  background: -moz-linear-gradient(135deg, #0800E0 0%, #000000 100%);
+  background: -webkit-linear-gradient(135deg, #0800E0 0%, #000000 100%);
+  background: -o-linear-gradient(135deg, #0800E0 0%, #000000 100%);
+  background: linear-gradient(135deg, #0800E0 0%, #000000 100%);
+  color: #FFFFFF;
 }
-#banner h1{ margin:0; padding:15px; }
+#banner h1{ margin:0; padding:18px 15px; }
 
-/* Nav (list styled as buttons) */
+/* Nav (list → buttons) */
 #site-nav{ padding: 5px 15px; }
 .nav-list{ list-style:none; margin:0; padding:0; }
 .nav-list li{ float:left; margin-right:8px; }
@@ -61,14 +66,14 @@ body{
 .button{
   font-size: large;
   text-decoration:none;
-  background-color:#F59E0B; /* gold */
+  background-color:#67E5DB; /* teal */
   display:block;
   padding:8px 12px;
   border-radius:12px;
-  box-shadow:3px 3px 2px rgba(0,0,0,.4);
-  color:#111827; /* dark text for contrast */
+  box-shadow:3px 3px 2px rgba(0,0,0,.35);
+  color:#000000; /* dark text on teal */
 }
-.button:hover{ box-shadow:5px 5px 3px black; }
+.button:hover{ box-shadow:5px 5px 3px rgba(0,0,0,.6); }
 
 .clear{ clear: both; }
 
@@ -79,9 +84,10 @@ body{
   float: left;
   margin: 15px;
   padding: 10px;
-  background: #059669; /* jade */
-  border-radius: 8px;
-  color: #f9fafb;
+  background: #ADEAEA; /* light teal */
+  border: 2px solid #67E5DB;
+  border-radius: 10px;
+  color: #000000;
 }
 
 .profile-photo{
@@ -89,78 +95,23 @@ body{
   height: auto;
   display:block;
   margin: 10px auto;
+  border: 4px solid #67E5DB;
+  background:#FFFFFF;
 }
 .intro-video{
   display:block;
   margin: 10px auto;
   max-width: 95%;
+  border: 4px solid #67E5DB;
+  background:#000000;
 }
 
 /* Footer */
 #footer{
   height:80px;
-  background-color:#111827; /* obsidian */
+  background-color:#000000; 
+  color:#FFFFFF;
   padding:10px 15px;
 }
-#footer a{ color:#F59E0B; }
+#footer a{ color:#67E5DB; }
 
-/* ===== Tablet (481px–960px) ===== */
-@media only screen and (min-width:481px) and (max-width:960px){
-  #wrapper{ width: 100%; min-height: 600px; background-color:#334155; }
-
-  /* Stack columns */
-  #left-column{
-    float:none; width:100%; min-height:120px; background-color:#0f172a;
-  }
-  #right-column{
-    float:none; width:100%; min-height:600px; background-color:#F59E0B; color:#111827;
-  }
-
-  #banner{ height:100px; background-color:#111827; }
-  #footer{ height:80px; background-color:#111827; }
-
-  .box{
-    width: 45%; min-height:120px; float:left; margin:15px;
-    background-color:#111827; color:#f9fafb;
-  }
-
-  .button{
-    font-size:x-large; background-color:#F59E0B; width:45%;
-    float:left; padding:8px; margin:5px; border-radius:15px; box-shadow:5px 5px 3px gray; color:#111827;
-  }
-  .button:hover{ box-shadow:5px 5px 3px black; }
-
-  .clear{ clear: both; }
-  .profile-photo{ width: 90%; }
-  .intro-video{ max-width: 90%; }
-}
-
-/* ===== Phone (≤ 480px) ===== */
-@media only screen and (max-width:480px){
-  #wrapper{ width:100%; min-height: 600px; background-color:#111827; }
-  #left-column, #right-column{ float:none; width:100%; background-color:#1f2937; }
-
-  #banner{ height:90px; background-color:#111827; }
-  #footer{ height:80px; background-color:#111827; }
-
-  /* Full-width nav buttons for touch */
-  .nav-list li{ float:none; margin:8px 0; }
-  .button{
-    display:block; width:90%; margin:5px auto; text-align:center;
-    padding:10px; border-radius:16px; font-size:large; background-color:#F59E0B; color:#111827;
-  }
-
-  /* Radial gradient on boxes (gold → ember red) */
-  .box{
-    width: 90%; min-height:120px; margin: 15px auto; padding: 10px; float:none;
-    background: #F59E0B; /* fallback */
-    background: -moz-radial-gradient(circle, #F59E0B 0%, #B91C1C 100%);
-    background: -webkit-radial-gradient(circle, #F59E0B 0%, #B91C1C 100%);
-    background: -o-radial-gradient(circle, #F59E0B 0%, #B91C1C 100%);
-    background: radial-gradient(circle, #F59E0B 0%, #B91C1C 100%);
-    border-radius:12px; color:#111827;
-  }
-
-  .profile-photo, .intro-video{ max-width: 92%; }
-  .clear{ clear: both; }
-}

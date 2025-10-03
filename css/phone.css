@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* Phone (≤480px).
+   Single-column layout; larger tap targets; radial gradient demo.
+   Palette: 67E5DB | ADEAEA | 000000 | 0800E0 | FFFFFF
+*/
+
+body{
+  color:#FFFFFF;
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  margin:0; padding:0;
+  background:#000000;
+}
+
+h1,h2,h3,h4,h5,h6,p,li{ margin-left:15px; margin-top:0; }
+
+#wrapper{ width:100%; min-height: 600px; background-color:#000000; }
+#left-column, #right-column{ float:none; width:100%; background-color:#000000; }
+
+#banner{ 
+  height:90px; 
+  background: #0800E0; 
+  color:#FFFFFF; 
+}
+#footer{ height:80px; background-color:#000000; color:#FFFFFF; }
+
+/* Full-width nav buttons for touch */
+.nav-list li{ float:none; margin:8px 0; }
+.button{
+  display:block;
+  width:90%;
+  margin:5px auto;
+  text-align:center;
+  padding:12px;
+  border-radius:18px;
+  font-size:large;
+  background-color:#67E5DB;
+  color:#000000;
+  box-shadow:3px 3px 2px rgba(0,0,0,.45);
+}
+
+/* Radial gradient on content boxes (teal → blue) */
+.box{
+  width: 90%;
+  min-height:120px;
+  margin: 15px auto;
+  padding: 10px;
+  float:none;
+  background: #67E5DB; /* fallback */
+  background: -moz-radial-gradient(circle, #67E5DB 0%, #0800E0 100%);
+  background: -webkit-radial-gradient(circle, #67E5DB 0%, #0800E0 100%);
+  background: -o-radial-gradient(circle, #67E5DB 0%, #0800E0 100%);
+  background: radial-gradient(circle, #67E5DB 0%, #0800E0 100%);
+  border-radius:12px;
+  color:#000000;
+  border: 2px solid #FFFFFF;
+}
+
+.profile-photo, .intro-video{ max-width: 92%; display:block; margin:10px auto; }
+.clear{ clear: both; }
