@@ -11,7 +11,6 @@ h1,h2,h3,h4,h5,h6,p,li { margin-left: 12px; margin-top: 0; }
 
 #wrapper { width: 100%; background-color: #FFFFFF; }
 
-
 header {
   color: #FFFFFF;
   padding: 12px 12px 0 12px;
@@ -62,7 +61,6 @@ nav .button {
 video { width: 90%; display: block; margin: 10px auto; background-color:#000; border:2px solid #FFF; box-shadow: 6px 6px 4px #000; }
 
 input, textarea { width: 90%; max-width: 480px; }
-
 
 footer { background-color: #000000; color: #FFFFFF; padding: 12px 0 18px 0; text-align:left; }
 footer a { color: #67E5DB; }
