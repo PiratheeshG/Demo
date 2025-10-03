@@ -1,25 +1,16 @@
 @charset "UTF-8";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 body {
   color: #000000;
   font-family: Verdana, Geneva, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1,h2,h3,h4,h5,h6,p,li { margin-left: 12px; margin-top: 0; }
 
-#wrapper {
-  width: 100%;
-  min-height: 100%;
-  position: relative;
-  padding-bottom: 100px;
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-}
+#wrapper { width: 100%; background-color: #FFFFFF; }
+
 
 header {
   color: #FFFFFF;
@@ -30,6 +21,7 @@ header {
   background: -o-linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
   background: linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
 }
+
 
 nav .button {
   display: block;
@@ -45,20 +37,19 @@ nav .button {
 }
 .clear { clear: both; }
 
+
 .gradient-straight {
   background: #67E5DB;
+  background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: -webkit-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
+  background: -o-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
   background: linear-gradient(to bottom, #67E5DB 0%, #ADEAEA 100%);
   padding: 12px 0 20px 0;
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
 }
 
-.feature-img {
-  width: 90%;
-  height: auto;
-  border: 2px solid #000000;
-  margin: 10px auto;
-}
+.feature-img { width: 90%; height: auto; border: 2px solid #000000; }
 
 .project {
   display: block;
@@ -68,26 +59,11 @@ nav .button {
   border: 1px solid #ADEAEA;
 }
 
-video {
-  width: 90%;
-  display: block;
-  margin: 10px auto;
-  background-color:#000;
-  border:2px solid #FFF;
-  box-shadow: 6px 6px 4px #000;
-}
+video { width: 90%; display: block; margin: 10px auto; background-color:#000; border:2px solid #FFF; box-shadow: 6px 6px 4px #000; }
 
 input, textarea { width: 90%; max-width: 480px; }
 
-footer {
-  background-color: #000000;
-  color: #FFFFFF;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px 0 18px 0;
-  text-align: left;
-}
+
+footer { background-color: #000000; color: #FFFFFF; padding: 12px 0 18px 0; text-align:left; }
 footer a { color: #67E5DB; }
+

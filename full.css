@@ -1,26 +1,24 @@
 @charset "UTF-8";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 body {
   color: #000000;
   background-color: #FFFFFF;
   font-family: Verdana, Geneva, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #wrapper {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100%;
-  position: relative;
-  padding-bottom: 100px;
-  box-sizing: border-box;
+  min-height: 100%;   
+  position: relative; 
   background-color: #FFFFFF;
+  padding-bottom: 80px; 
+  box-sizing: border-box;
 }
+
 
 header {
   color: #FFFFFF;
@@ -33,6 +31,7 @@ header {
 }
 
 h1,h2,h3,h4,h5,h6,p,li { margin-left: 15px; }
+
 
 nav .button {
   display: inline-block;
@@ -48,6 +47,7 @@ nav .button {
 nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
 .clear { clear: both; }
 
+
 .gradient-straight {
   background: #67E5DB;
   background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
@@ -58,6 +58,7 @@ nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
   border: 2px solid #000000;
 }
 
+
 .feature-img {
   max-width: 320px;
   height: auto;
@@ -66,6 +67,7 @@ nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
   border: 2px solid #000000;
 }
 
+
 .project {
   display: inline-block;
   vertical-align: top;
@@ -73,9 +75,10 @@ nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
   min-height: 120px;
   margin: 10px 15px;
   padding: 10px;
-  background-color: #F7FFFF;
+  background-color: #F7FFFF; 
   border: 1px solid #ADEAEA;
 }
+
 
 video {
   width: 480px;
@@ -86,6 +89,7 @@ video {
   border: 2px solid #FFFFFF;
   box-shadow: 10px 10px 5px #000000;
 }
+
 
 form p { margin-left: 15px; }
 input, textarea {
@@ -101,19 +105,14 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+
 footer {
   background-color: #000000;
   color: #FFFFFF;
-  height: 100px;
-  line-height: 1.4;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   padding: 12px 0 20px 0;
+  margin-top: 24px;
 }
 footer a { color: #67E5DB; }
-
 
 
 
