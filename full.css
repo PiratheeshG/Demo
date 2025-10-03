@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Base typography & reset */
 body {
   color: #000000;
   background-color: #FFFFFF;
@@ -9,16 +8,18 @@ body {
   padding: 0;
 }
 
-/* Wrapper centered at 960px like lectures */
 #wrapper {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100vh;
+  min-height: 100%;   
+  position: relative; 
   background-color: #FFFFFF;
+  padding-bottom: 80px; 
+  box-sizing: border-box;
 }
 
-/* Header: angled gradient (Week-1 gradient syntax) */
+
 header {
   color: #FFFFFF;
   padding: 16px 16px 0 16px;
@@ -31,7 +32,7 @@ header {
 
 h1,h2,h3,h4,h5,h6,p,li { margin-left: 15px; }
 
-/* Navigation as large, tap-friendly buttons (no hover menus) */
+
 nav .button {
   display: inline-block;
   text-decoration: none;
@@ -46,7 +47,7 @@ nav .button {
 nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
 .clear { clear: both; }
 
-/* Straight (non-angled) gradient section to satisfy linear-gradient requirement */
+
 .gradient-straight {
   background: #67E5DB;
   background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
@@ -57,7 +58,7 @@ nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
   border: 2px solid #000000;
 }
 
-/* About page image */
+
 .feature-img {
   max-width: 320px;
   height: auto;
@@ -66,7 +67,7 @@ nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
   border: 2px solid #000000;
 }
 
-/* Projects list (no flexbox) */
+
 .project {
   display: inline-block;
   vertical-align: top;
@@ -74,11 +75,11 @@ nav .button:hover { box-shadow: 5px 5px 3px rgba(0,0,0,0.35); }
   min-height: 120px;
   margin: 10px 15px;
   padding: 10px;
-  background-color: #F7FFFF; /* very light from palette */
+  background-color: #F7FFFF; 
   border: 1px solid #ADEAEA;
 }
 
-/* Video framing (from lecture idea of styling <video>) */
+
 video {
   width: 480px;
   max-width: 90%;
@@ -89,7 +90,7 @@ video {
   box-shadow: 10px 10px 5px #000000;
 }
 
-/* Contact form */
+
 form p { margin-left: 15px; }
 input, textarea {
   font-family: inherit;
@@ -104,7 +105,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Footer with semantic address */
+
 footer {
   background-color: #000000;
   color: #FFFFFF;
@@ -112,6 +113,7 @@ footer {
   margin-top: 24px;
 }
 footer a { color: #67E5DB; }
+
 
 
 
