@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h6,p,li { margin-left: 12px; margin-top: 0; }
 
 #wrapper { width: 100%; background-color: #FFFFFF; }
 
-/* Header gradient remains consistent */
+
 header {
   color: #FFFFFF;
   padding: 12px 12px 0 12px;
@@ -22,7 +22,7 @@ header {
   background: linear-gradient(45deg, #0800E0 0%, #67E5DB 100%);
 }
 
-/* Big, single-column nav buttons */
+
 nav .button {
   display: block;
   width: 85%;
@@ -37,7 +37,7 @@ nav .button {
 }
 .clear { clear: both; }
 
-/* Linear gradient section */
+
 .gradient-straight {
   background: #67E5DB;
   background: -moz-linear-gradient(top, #67E5DB 0%, #ADEAEA 100%);
